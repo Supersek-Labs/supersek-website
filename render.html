@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperSek - Index Render</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Animations usually defined in tailwind.config.js */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translate3d(0, 40px, 0); }
+            to { opacity: 1; transform: translate3d(0, 0, 0); }
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        /* Simulating the opacity-0 start state for the observer */
+        .blog-feed__item {
+            opacity: 0; 
+        }
+
+        /* Abstract Wavy Background Simulation */
+        .wavy-bg-simulation {
+            background-color: #000;
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-black text-white font-sans relative">
+
+    <div class="fixed inset-0 -z-10 wavy-bg-simulation opacity-40"></div>
+
+    <header class="fixed top-0 w-full z-50 border-b border-white/10 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="font-bold text-xl tracking-tighter">SuperSek</span>
+            <nav class="hidden md:flex gap-6 text-sm text-gray-300">
+                <a href="#" class="hover:text-white transition">Articles</a>
+                <a href="#" class="hover:text-white transition">About</a>
+                <a href="#" class="hover:text-white transition">Subscribe</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-20">
+        
+        <section class="mb-24">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-4xl">
+                    <h1 class="text-6xl md:text-8xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+                        SuperSek
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-400 max-w-2xl leading-relaxed">
+                        SuperSek is a modern digital publication featuring bold ideas, sharp insights, and stories that push boundaries.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="max-w-7xl mx-auto px-6">
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                    
+                    <li class="blog-feed__item space-y-4 cursor-pointer group" id="art-1">
+                        <div class="aspect-[16/9] overflow-hidden rounded-lg bg-gray-800 border border-white/10">
+                            <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600">
+                                [Article Image]
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-xs text-gray-500 uppercase tracking-wider font-mono">
+                                Dec 24, 2024
+                            </div>
+                            <h3 class="text-2xl font-semibold leading-tight group-hover:text-blue-400 transition-colors">
+                                The Future of Application Security
+                            </h3>
+                            <p class="text-gray-400 line-clamp-2">
+                                Exploring how AI is changing the landscape of penetration testing and defense.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="blog-feed__item space-y-4 cursor-pointer group" id="art-2" style="animation-delay: 150ms;">
+                        <div class="aspect-[16/9] overflow-hidden rounded-lg bg-gray-800 border border-white/10">
+                             <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600">
+                                [Article Image]
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-xs text-gray-500 uppercase tracking-wider font-mono">
+                                Dec 20, 2024
+                            </div>
+                            <h3 class="text-2xl font-semibold leading-tight group-hover:text-blue-400 transition-colors">
+                                Understanding DNS Vulnerabilities
+                            </h3>
+                            <p class="text-gray-400 line-clamp-2">
+                                A deep dive into dangling records and how to secure your infrastructure.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="blog-feed__item space-y-4 cursor-pointer group" id="art-3" style="animation-delay: 0ms;">
+                        <div class="aspect-[16/9] overflow-hidden rounded-lg bg-gray-800 border border-white/10">
+                             <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600">
+                                [Article Image]
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-xs text-gray-500 uppercase tracking-wider font-mono">
+                                Dec 15, 2024
+                            </div>
+                            <h3 class="text-2xl font-semibold leading-tight group-hover:text-blue-400 transition-colors">
+                                Cloud Security Essentials
+                            </h3>
+                            <p class="text-gray-400 line-clamp-2">
+                                Best practices for securing AWS and Azure environments for enterprise.
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="blog-feed__item space-y-4 cursor-pointer group" id="art-4" style="animation-delay: 150ms;">
+                        <div class="aspect-[16/9] overflow-hidden rounded-lg bg-gray-800 border border-white/10">
+                             <div class="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 group-hover:scale-105 transition-transform duration-500 flex items-center justify-center text-gray-600">
+                                [Article Image]
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center text-xs text-gray-500 uppercase tracking-wider font-mono">
+                                Dec 10, 2024
+                            </div>
+                            <h3 class="text-2xl font-semibold leading-tight group-hover:text-blue-400 transition-colors">
+                                Cosmology and Code
+                            </h3>
+                            <p class="text-gray-400 line-clamp-2">
+                                Where the laws of physics meet the logic of software engineering.
+                            </p>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 mt-24 bg-black">
+        <div class="max-w-7xl mx-auto px-6 py-12 text-center">
+            <p class="text-sm text-gray-500">© 2024 SuperSek. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            // Add the animation class when element comes into view
+                            entry.target.classList.add("animate-fadeInUp");
+                            // Reveal the element (it starts at opacity: 0)
+                            entry.target.style.opacity = "1"; 
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+            );
+
+            const articles = document.querySelectorAll('.blog-feed__item');
+            articles.forEach((article) => {
+                observer.observe(article);
+            });
+        });
+    </script>
+</body>
+</html>

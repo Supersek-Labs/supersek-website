@@ -18,6 +18,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  cursor: none;
+  /* Hide default cursor globally */
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
+  cursor: none !important;
+  /* Ensure interactive elements hide default cursor */
 }
 
 h1,
@@ -61,4 +73,26 @@ h6 {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(138, 138, 138, 0.3);
+}
+
+/* Gradient Shine Animation */
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.text-gradient-shine {
+  background: linear-gradient(to right,
+      #ffffff 0%,
+      #a09df0 25%,
+      #231ddb 50%,
+      #a09df0 75%,
+      #ffffff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: shine 4s linear infinite;
 }

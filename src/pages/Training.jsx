@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import ParticleWave from '../components/ParticleWave';
 
 const Training = () => {
     return (
@@ -14,69 +15,73 @@ const Training = () => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 padding: '0 2rem',
-                position: 'relative'
+                position: 'relative',
+                overflow: 'hidden'
             }}>
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    style={{
-                        fontSize: 'clamp(1.75rem, 5.5vw, 4rem)',
-                        marginBottom: '1.5rem',
-                        lineHeight: 1.2,
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 700
-                    }}
-                >
-                    FROM FOUNDATION TO MASTERY
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    style={{
-                        color: '#B3B3B3',
-                        fontSize: 'clamp(1rem, 1.75vw, 1.35rem)',
-                        maxWidth: '900px',
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 400,
-                        lineHeight: 1.6,
-                        marginBottom: '2rem'
-                    }}
-                >
-                    Comprehensive security training that bridges the gap between core fundamentals and advanced exploitation. Whether you are entering the field or deepening existing expertise, the focus is on building skills that hold up in real systems and real assessments.
-                </motion.p>
-                <Link to="/contact" style={{ textDecoration: 'none' }}>
-                    <motion.button
+                <ParticleWave />
+                <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <motion.h1 className="text-gradient-shine"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        style={{
+                            fontSize: 'clamp(1.75rem, 5.5vw, 4rem)',
+                            marginBottom: '1.5rem',
+                            lineHeight: 1.2,
+                            fontFamily: "'Inter', sans-serif",
+                            fontWeight: 700
+                        }}
+                    >
+                        FROM FOUNDATION TO MASTERY
+                    </motion.h1>
+                    <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.8, delay: 0.3 }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
                         style={{
-                            padding: '1rem 3rem',
-                            background: '#231ddb',
-                            color: '#ffffff',
-                            borderRadius: '9999px',
-                            border: 'none',
-                            fontWeight: 700,
-                            fontSize: '0.9rem',
-                            cursor: 'pointer',
-                            transition: 'all 0.3s'
-                        }}
-                        onMouseEnter={(e) => {
-                            e.target.style.background = '#2f25e8';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.target.style.background = '#231ddb';
+                            color: '#B3B3B3',
+                            fontSize: 'clamp(1rem, 1.75vw, 1.35rem)',
+                            maxWidth: '900px',
+                            fontFamily: "'Inter', sans-serif",
+                            fontWeight: 400,
+                            lineHeight: 1.6,
+                            marginBottom: '2rem'
                         }}
                     >
-                        START YOUR JOURNEY
-                    </motion.button>
-                </Link>
+                        Comprehensive security training that bridges the gap between core fundamentals and advanced exploitation. Whether you are entering the field or deepening existing expertise, the focus is on building skills that hold up in real systems and real assessments.
+                    </motion.p>
+                    <Link to="/contact" style={{ textDecoration: 'none' }}>
+                        <motion.button
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            style={{
+                                padding: '1rem 3rem',
+                                background: '#231ddb',
+                                color: '#ffffff',
+                                borderRadius: '9999px',
+                                border: 'none',
+                                fontWeight: 700,
+                                fontSize: '0.9rem',
+                                cursor: 'pointer',
+                                transition: 'all 0.3s'
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.background = '#2f25e8';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.background = '#231ddb';
+                            }}
+                        >
+                            START YOUR JOURNEY
+                        </motion.button>
+                    </Link>
+                </div>
             </section>
 
             {/* Philosophy */}
@@ -89,7 +94,7 @@ const Training = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -212,7 +217,7 @@ const Training = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -252,7 +257,7 @@ const Training = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -372,7 +377,7 @@ const Training = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -492,7 +497,7 @@ const Training = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -612,7 +617,7 @@ const Training = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '800px', width: '100%', textAlign: 'center' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}

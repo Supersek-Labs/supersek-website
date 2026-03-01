@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ParticleWave from '../components/ParticleWave';
 import founderImage from '../assets/founder.jpg';
 
 const Contact = () => {
@@ -14,38 +15,42 @@ const Contact = () => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 padding: '0 2rem',
-                position: 'relative'
+                position: 'relative',
+                overflow: 'hidden'
             }}>
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    style={{
-                        fontSize: 'clamp(1.75rem, 5.5vw, 4rem)',
-                        marginBottom: '1.5rem',
-                        lineHeight: 1.2,
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 700
-                    }}
-                >
-                    ENGAGE SUPERSEK
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    style={{
-                        color: '#B3B3B3',
-                        fontSize: 'clamp(1.125rem, 2.5vw, 1.75rem)',
-                        maxWidth: '800px',
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 500
-                    }}
-                >
-                    Security engagements built around real attack paths and production risk—applied where it matters, not where it's convenient.
-                </motion.p>
+                <ParticleWave />
+                <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <motion.h1 className="text-gradient-shine"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        style={{
+                            fontSize: 'clamp(1.75rem, 5.5vw, 4rem)',
+                            marginBottom: '1.5rem',
+                            lineHeight: 1.2,
+                            fontFamily: "'Inter', sans-serif",
+                            fontWeight: 700
+                        }}
+                    >
+                        ENGAGE SUPERSEK
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        style={{
+                            color: '#B3B3B3',
+                            fontSize: 'clamp(1.125rem, 2.5vw, 1.75rem)',
+                            maxWidth: '800px',
+                            fontFamily: "'Inter', sans-serif",
+                            fontWeight: 500
+                        }}
+                    >
+                        Security engagements built around real attack paths and production risk—applied where it matters, not where it's convenient.
+                    </motion.p>
+                </div>
             </section>
 
             {/* Founder Section */}
@@ -61,7 +66,7 @@ const Contact = () => {
                     maxWidth: '1400px',
                     width: '100%'
                 }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}

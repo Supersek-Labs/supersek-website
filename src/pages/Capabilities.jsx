@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ParticleWave from '../components/ParticleWave';
 
 const Capabilities = () => {
     const capabilities = [
@@ -33,38 +34,42 @@ const Capabilities = () => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 padding: '0 2rem',
-                position: 'relative'
+                position: 'relative',
+                overflow: 'hidden'
             }}>
-                <motion.h1
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    style={{
-                        fontSize: 'clamp(1.75rem, 5.5vw, 4rem)',
-                        marginBottom: '1.5rem',
-                        lineHeight: 1.2,
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 700
-                    }}
-                >
-                    CAPABILITIES
-                </motion.h1>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    style={{
-                        color: '#B3B3B3',
-                        fontSize: 'clamp(1rem, 1.75vw, 1.35rem)',
-                        maxWidth: '900px',
-                        fontFamily: "'Inter', sans-serif",
-                        fontWeight: 400
-                    }}
-                >
-                    Offensive security across modern systems—focused on how real designs fail under adversarial conditions.
-                </motion.p>
+                <ParticleWave />
+                <div style={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <motion.h1 className="text-gradient-shine"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                        style={{
+                            fontSize: 'clamp(1.75rem, 5.5vw, 4rem)',
+                            marginBottom: '1.5rem',
+                            lineHeight: 1.2,
+                            fontFamily: "'Inter', sans-serif",
+                            fontWeight: 700
+                        }}
+                    >
+                        CAPABILITIES
+                    </motion.h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        style={{
+                            color: '#B3B3B3',
+                            fontSize: 'clamp(1rem, 1.75vw, 1.35rem)',
+                            maxWidth: '900px',
+                            fontFamily: "'Inter', sans-serif",
+                            fontWeight: 400
+                        }}
+                    >
+                        Offensive security across modern systems—focused on how real designs fail under adversarial conditions.
+                    </motion.p>
+                </div>
             </section>
 
             {/* Capabilities Index */}
@@ -122,7 +127,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -198,7 +203,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -284,7 +289,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -360,7 +365,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -436,7 +441,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -512,7 +517,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -588,7 +593,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -664,7 +669,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -740,7 +745,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -816,7 +821,7 @@ const Capabilities = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1000px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}

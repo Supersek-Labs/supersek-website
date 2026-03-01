@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ParticleWave from '../components/ParticleWave';
 
 const Philosophy = () => {
     return (
@@ -10,10 +11,13 @@ const Philosophy = () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: '5rem 2rem'
+                padding: '5rem 2rem',
+                position: 'relative',
+                overflow: 'hidden'
             }}>
-                <div style={{ maxWidth: '1200px', width: '100%' }}>
-                    <motion.h2
+                <ParticleWave />
+                <div style={{ maxWidth: '1200px', width: '100%', position: 'relative', zIndex: 1 }}>
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -75,7 +79,7 @@ const Philosophy = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1200px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -137,7 +141,7 @@ const Philosophy = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1200px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -209,7 +213,7 @@ const Philosophy = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1200px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -271,7 +275,7 @@ const Philosophy = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1200px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -333,7 +337,7 @@ const Philosophy = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1200px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
@@ -386,7 +390,7 @@ const Philosophy = () => {
                 borderTop: '1px solid rgba(154, 154, 162, 0.1)'
             }}>
                 <div style={{ maxWidth: '1200px', width: '100%' }}>
-                    <motion.h2
+                    <motion.h2 className="text-gradient-shine"
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}

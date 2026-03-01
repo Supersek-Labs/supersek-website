@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import ParticleWave from '../components/ParticleWave';
 
 const Home = () => {
     return (
@@ -14,22 +15,30 @@ const Home = () => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 padding: '0 2rem',
-                position: 'relative'
+                position: 'relative',
+                overflow: 'hidden'
             }}>
+                {/* Particle Wave Background */}
+                <ParticleWave />
+
+                {/* Hero Content - above the canvas */}
                 <motion.h1
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
+                    className="text-gradient-shine"
                     style={{
                         fontSize: 'clamp(1.75rem, 5.5vw, 4rem)',
                         marginBottom: '1.5rem',
                         lineHeight: 1.2,
                         fontFamily: "'Inter', sans-serif",
-                        fontWeight: 700
+                        fontWeight: 700,
+                        position: 'relative',
+                        zIndex: 1
                     }}
                 >
-                    DEEP-DIVE SECURITY CONSULTING FOR THE MODERN STACK
+                    DEEP-DIVE SECURITY CONSULTING FOR<br />THE MODERN STACK
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -41,7 +50,9 @@ const Home = () => {
                         fontSize: 'clamp(1.125rem, 2.5vw, 1.75rem)',
                         maxWidth: '800px',
                         fontFamily: "'Inter', sans-serif",
-                        fontWeight: 500
+                        fontWeight: 500,
+                        position: 'relative',
+                        zIndex: 1
                     }}
                 >
                     Fundamentals-first offensive assessments across applications and cloud.
@@ -62,6 +73,7 @@ const Home = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
                         transition={{ duration: 1 }}
+                        className="text-gradient-shine"
                         style={{
                             fontSize: 'clamp(2.25rem, 7vw, 6rem)',
                             marginBottom: '2rem'
@@ -96,94 +108,35 @@ const Home = () => {
                 padding: '5rem 2rem',
                 overflow: 'hidden'
             }}>
-                <div style={{
-                    maxWidth: '1400px',
-                    width: '100%',
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '3rem',
-                    alignItems: 'center'
-                }}>
-                    <div>
-                        <motion.h3
-                            initial={{ opacity: 0, x: -30 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            style={{
-                                fontSize: 'clamp(1.75rem, 4.5vw, 4.5rem)',
-                                marginBottom: '1.5rem'
-                            }}
-                        >
-                            FOR SECURITY BEYOND CHECKLISTS
-                        </motion.h3>
-                        <motion.p
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                            style={{
-                                color: '#B3B3B3',
-                                fontSize: 'clamp(1rem, 1.75vw, 1.35rem)',
-                                fontFamily: "'Inter', sans-serif",
-                                fontWeight: 400
-                            }}
-                        >
-                            Supersek works with product and platform teams operating complex application and cloud environments—where security failures are architectural, not superficial.
-                        </motion.p>
-                    </div>
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="glass"
+                <div style={{ maxWidth: '1000px', textAlign: 'center' }}>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ margin: "-20%" }}
+                        transition={{ duration: 1 }}
+                        className="text-gradient-shine"
                         style={{
-                            aspectRatio: '1',
-                            borderRadius: '1.5rem',
-                            padding: '2rem',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            gap: '1rem',
-                            position: 'relative',
-                            overflow: 'hidden'
+                            fontSize: 'clamp(2.25rem, 7vw, 6rem)',
+                            marginBottom: '2rem'
                         }}
                     >
-                        {[1, 2, 3, 4].map((i) => (
-                            <div key={i} style={{
-                                height: '4px',
-                                background: 'rgba(255, 255, 255, 0.1)',
-                                borderRadius: '9999px',
-                                width: '100%',
-                                position: 'relative',
-                                overflow: 'hidden'
-                            }}>
-                                <motion.div
-                                    initial={{ width: 0 }}
-                                    whileInView={{ width: "100%" }}
-                                    transition={{ duration: 2, delay: i * 0.2 }}
-                                    style={{
-                                        position: 'absolute',
-                                        inset: 0,
-                                        background: '#231ddb'
-                                    }}
-                                />
-                            </div>
-                        ))}
-                        <div style={{
-                            marginTop: '2rem',
-                            fontFamily: 'monospace',
-                            fontSize: '0.75rem',
-                            color: '#8A8A8A',
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(2, 1fr)',
-                            gap: '0.5rem'
-                        }}>
-                            <div style={{ background: '#0A0A0A', padding: '0.5rem', borderRadius: '4px' }}>STACK_INIT()</div>
-                            <div style={{ background: '#0A0A0A', padding: '0.5rem', borderRadius: '4px' }}>OVR_RIDE_SYS</div>
-                            <div style={{ background: '#0A0A0A', padding: '0.5rem', borderRadius: '4px' }}>PTR_VULN_SCAN</div>
-                            <div style={{ background: '#0A0A0A', padding: '0.5rem', borderRadius: '4px' }}>CRIT_PATH_EXPL</div>
-                        </div>
-                    </motion.div>
+                        FOR SECURITY BEYOND CHECKLISTS
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ margin: "-20%" }}
+                        transition={{ duration: 1, delay: 0.3 }}
+                        style={{
+                            color: '#B3B3B3',
+                            fontSize: 'clamp(1.125rem, 2.75vw, 2.5rem)',
+                            lineHeight: 1.6,
+                            fontFamily: "'Inter', sans-serif",
+                            fontWeight: 500
+                        }}
+                    >
+                        Supersek works with product and platform teams operating complex application and cloud environments—where security failures are architectural, not superficial.
+                    </motion.p>
                 </div>
             </section>
 
@@ -201,6 +154,7 @@ const Home = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
                         transition={{ duration: 1 }}
+                        className="text-gradient-shine"
                         style={{
                             fontSize: 'clamp(2.25rem, 7vw, 6rem)',
                             marginBottom: '2rem'
@@ -240,6 +194,7 @@ const Home = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
                         transition={{ duration: 1 }}
+                        className="text-gradient-shine"
                         style={{
                             fontSize: 'clamp(2.25rem, 7vw, 6rem)',
                             marginBottom: '2rem'
@@ -279,6 +234,7 @@ const Home = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ margin: "-20%" }}
                         transition={{ duration: 1 }}
+                        className="text-gradient-shine"
                         style={{
                             fontSize: 'clamp(2.25rem, 7vw, 6rem)',
                             marginBottom: '2rem'
@@ -319,6 +275,7 @@ const Home = () => {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
+                    className="text-gradient-shine"
                     style={{
                         fontSize: 'clamp(1.75rem, 4.5vw, 4.5rem)',
                         marginBottom: '3rem',

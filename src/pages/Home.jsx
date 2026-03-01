@@ -38,7 +38,7 @@ const Home = () => {
                         zIndex: 1
                     }}
                 >
-                    DEEP-DIVE SECURITY CONSULTING FOR<br />THE MODERN STACK
+                    SUPERSEK: DEEP-DIVE SECURITY CONSULTING FOR<br />THE MODERN STACK
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}

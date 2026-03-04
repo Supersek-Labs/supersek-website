@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import ParticleWave from '../components/ParticleWave';
 
-const Training = () => {
+const Academy = () => {
     return (
         <main style={{ paddingTop: '80px' }}>
             {/* Entry / Orientation */}
@@ -676,4 +676,4 @@ const Training = () => {
     );
 };
 
-export default Training;
+export default Academy;

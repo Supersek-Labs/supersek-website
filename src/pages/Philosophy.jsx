@@ -286,7 +286,7 @@ const Philosophy = () => {
                             maxWidth: '1200px'
                         }}
                     >
-                        TRAINING TRANSFERS JUDGMENT
+                        ACADEMY TRANSFERS JUDGMENT
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

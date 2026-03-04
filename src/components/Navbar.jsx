@@ -23,7 +23,7 @@ const Navbar = () => {
     const navLinks = [
         { to: '/philosophy', label: 'Philosophy' },
         { to: '/capabilities', label: 'Capabilities' },
-        { to: '/training', label: 'Training' },
+        { to: '/academy', label: 'Academy' },
         { to: '/research', label: 'Research' },
         { to: '/contact', label: 'Contact' }
     ];

@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Labs from './pages/Labs';
 import Contact from './pages/Contact';
 import Capabilities from './pages/Capabilities';
-import Training from './pages/Training';
+import Academy from './pages/Academy';
 import Philosophy from './pages/Philosophy';
 import SupersekNetrxReport from './pages/SupersekNetrxReport';
 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/research/supersek-netrx-agentic-penetration-testing" element={<SupersekNetrxReport />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/capabilities" element={<Capabilities />} />
-          <Route path="/training" element={<Training />} />
+          <Route path="/academy" element={<Academy />} />
         </Routes>
       </div>
     </Router>
